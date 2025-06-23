@@ -1,5 +1,6 @@
 import HeroSection from "./assets/HeroSection"
 import Navbar from "./assets/Navbar"
+import AboutMe from "./assets/AboutME"
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <div className="container">
       <Navbar/>
       <HeroSection />
+      <AboutMe />
     </div>
   )
 }

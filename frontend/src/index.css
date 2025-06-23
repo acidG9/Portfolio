@@ -187,3 +187,245 @@ body,
   filter: drop-shadow(0 0 10px #21d4fd44);
   z-index: 1;
 }
+
+/* AboutMe section */
+
+.about-me {
+  padding: 0 5vw;
+  overflow: hidden;
+}
+
+.about-me h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  background-image: linear-gradient(
+    149.9deg,
+    rgba(41, 151, 255, 1) 13.5%,
+    rgba(191, 90, 242, 1) 47.6%,
+    rgba(255, 55, 95, 1) 78.8%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  user-select: none;
+}
+
+.about-me-div1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-me-intro {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.about-me p {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  line-height: 1.7;
+  position: relative;
+  padding-left: 2rem;
+  user-select: none;
+}
+
+.about-me p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 4px;
+  width: 1.2rem;
+  background: linear-gradient(90deg, #b721ff, #21d4fd);
+  border-radius: 2px;
+}
+
+.about-me-hero {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  user-select: none;
+}
+
+.about-me img {
+  height: 280px;
+  width: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid transparent;
+  background: linear-gradient(rgba(29, 40, 41, 1), rgba(29, 40, 41, 1))
+      padding-box,
+    linear-gradient(135deg, #b721ff, #21d4fd) border-box;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 0 25px rgba(33, 212, 253, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-me img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 0 40px rgba(183, 33, 255, 0.3), 0 0 60px rgba(33, 212, 253, 0.2);
+}
+
+.about-me img::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(183, 33, 255, 0) 0%,
+    rgba(183, 33, 255, 0.1) 25%,
+    rgba(33, 212, 253, 0.2) 50%,
+    rgba(183, 33, 255, 0.1) 75%,
+    rgba(183, 33, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  z-index: 1;
+}
+
+.about-me img:hover::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(0deg);
+}
+
+.cv {
+  padding: 10px 35px;
+  max-width: 200px;
+  transition: all 0.5s ease;
+  background-size: 300% 300%;
+  color: #fff;
+  border-radius: 12px;
+  margin-top: 1rem;
+  margin-left: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #b721ff, #21d4fd, #b721ff);
+  box-shadow: 0 5px 15px rgba(33, 212, 253, 0.2);
+}
+
+.cv::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.8s ease;
+}
+
+.cv:hover {
+  background-position: right center;
+  box-shadow: 0 8px 25px rgba(183, 33, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+.cv:hover::after {
+  left: 100%;
+}
+
+.cv:active {
+  transform: scale(0.9);
+  box-shadow: 0 3px 10px rgba(33, 212, 253, 0.3);
+}
+
+.about-me-div2 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4rem;
+  user-select: none;
+}
+
+.about-me-div2 > div {
+  border-radius: 20px;
+  padding: 2.5rem 2.5rem 1rem 2.5rem;
+  width: 45%;
+}
+
+.about-me-div2 h2 {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  color: #e0e0e0;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.about-me-div2 h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #b721ff, #21d4fd);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.about-me-div2 > div:hover h2::after {
+  width: 100%;
+}
+
+.about-me-div2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-me-div2 li {
+  margin-bottom: 1.2rem;
+  padding-left: 2.5rem;
+  position: relative;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  transition: transform 0.3s ease;
+}
+
+.about-me-div2 li:hover {
+  transform: translateX(10px);
+}
+
+.about-me-div2 li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b721ff, #21d4fd);
+  transition: all 0.3s ease;
+}
+
+.about-me-div2 li:hover::before {
+  transform: scale(1.5);
+  box-shadow: 0 0 10px rgba(33, 212, 253, 0.5);
+}
