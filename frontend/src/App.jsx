@@ -6,17 +6,24 @@ import ContactMe from "./assets/ContactMe"
 import Footer from "./assets/Footer"
 
 function App() {
-
   return (
     <div className="container">
-      <Navbar/>
-      <HeroSection />
-      <AboutMe />
-      <Project />
-      <ContactMe />
+      <Navbar />
+      <section id="home">
+        <HeroSection />
+      </section>
+      <section id="about">
+        <AboutMe />
+      </section>
+      <section id="projects">
+        <Project />
+      </section>
+      <section id="contact">
+        <ContactMe />
+      </section>
       <Footer />
     </div>
-  )
+  );
 }
 
 export default App

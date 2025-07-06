@@ -12,13 +12,13 @@ const AboutME = () => {
                     <img src="me.jpg" alt="me" />
                 </div>
             </div>
-            <button className="cv">Download CV</button>
+            <a href="/akshansh_vaishnav.pdf" download><button className="cv">Download CV</button></a>
             <div className="about-me-div2">
                  <div>
                    <h2>Core Skills:</h2>
                    <ul>
                        <li>Language: Java, Javascript</li>
-                       <li>Frontend: React.js, Tailwind CSS, Material UI, Zustand</li>
+                       <li>Frontend: React.js, Tailwind CSS, Three.js, Zustand</li>
                        <li>Backend: Node.js, Express.js, MongoDB</li>
                        <li>Tools: Git, GitHub, Postman</li>
                    </ul>
