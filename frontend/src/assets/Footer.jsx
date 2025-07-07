@@ -6,7 +6,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>Copyright ©{year} Akshansh Vaishnav. All rights reserved.</p>
+        <p className="footer-pc">Copyright ©{year} Akshansh Vaishnav. All rights reserved.</p>
+        <p className="footer-mobile">Copyright ©{year} Akshansh Vaishnav</p>
         <div className="footer-icons">
           <a href="https://github.com/acidG9" target="_blank" rel="noopener noreferrer">
             <FaGithub />

@@ -47,7 +47,7 @@ const ContactMe = () => {
 
   return (
     <section className="contact-section">
-      <div className="contact-header">
+      <div className="contact-header section-title">
         <h2>Get In Touch</h2>
         <p>Have a project in mind? Let's make it happen</p>
       </div>

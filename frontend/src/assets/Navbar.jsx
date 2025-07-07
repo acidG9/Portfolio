@@ -1,26 +1,26 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      <h1 className="nav-name-pc"><em>Akshansh Vaishnav</em></h1>
-      <h1 className="nav-name-mobile"><em>Akshansh</em></h1>
-      <button
-        className="hamburger"
-        onClick={() => setMenuOpen(!menuOpen)}
+      <div className="logo logo-pc">Akshansh Vaishnav</div>
+      <div className="logo logo-mobile">Akshansh</div>
+      
+      <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+        <a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a>
+        <a href="#about" onClick={() => setIsMenuOpen(false)}>About me</a>
+        <a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a>
+        <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
+      </div>
+      
+      <button 
+        className="mobile-menu-btn" 
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+        {isMenuOpen ? '✕' : '☰'}
       </button>
-      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <a href="#home" onClick={() => setMenuOpen(false)}><li>Home</li></a>
-        <a href="#about" onClick={() => setMenuOpen(false)}><li>About me</li></a>
-        <a href="#projects" onClick={() => setMenuOpen(false)}><li>Projects</li></a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}><li>Contact</li></a>
-      </ul>
     </nav>
   );
 };
