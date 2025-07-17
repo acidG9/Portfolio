@@ -1,37 +1,40 @@
-import { useState } from 'react';
-import Canbas from "./Canbas"
+import { useState } from "react";
+import Canbas from "./Canbas";
 
 const Project = () => {
   const [activeProject, setActiveProject] = useState(0);
-  
+
   const projects = [
     {
       id: 1,
       name: "CuraScan",
       techName: "AI Health Diagnosis System",
-      summary: "A full-stack AI-powered health diagnosis app that predicts possible medical conditions based on user-inputted symptoms and test results. It also recommends the appropriate type of doctor for further consultation.",
+      summary:
+        "A full-stack AI-powered health diagnosis app that predicts possible medical conditions based on user-inputted symptoms and test results. It also recommends the appropriate type of doctor for further consultation.",
       techStack: "React, Node, Express, MongoDB",
       liveSite: "https://curascan.vercel.app/",
-      video: "/project/project1.mp4"
+      video: "/project/project1.mp4",
     },
     {
       id: 2,
-      name: "Breezer",
-      techName: "Weather Forecasting App",
-      summary: "A responsive weather web app that displays real-time and forecast weather data, including air quality, UV index, and astronomy details, using WeatherAPI. It adapts local time using moment-timezone and features an interactive UI.",
-      techStack: "HTML, CSS, JS, React",
-      liveSite: "https://breez3r.vercel.app/",
-      video: "/project/project2.mp4"
+      name: "DocNow",
+      techName: "Healthcare Appointment Platform",
+      summary:
+        "A full-stack doctor appointment scheduling system with role-based login, real-time calendar slot booking, patient-doctor notifications, and earnings tracking. Ensures secure access and smooth user experience for both doctors and patients.",
+      techStack: "React, Node, Express, MongoDB",
+      liveSite: "https://nowdoc.vercel.app/",
+      video: "/project/project2.mp4",
     },
     {
       id: 3,
-      name: "Portfolio",
-      techName: "Interactive 3D Portfolio",
-      summary: "A personal portfolio website with interactive 3D visuals and animations. Uses custom 3D scenes from Three.js to showcase projects in a modern, engaging format.",
-      techStack: "ThreeJS, React Three Fiber, GSAP",
-      liveSite: "https://akshansh.vercel.app/",
-      video: "/project/project3.mp4"
-    }
+      name: "Breezer",
+      techName: "Weather Forecasting App",
+      summary:
+        "A responsive weather web app that displays real-time and forecast weather data, including air quality, UV index, and astronomy details, using WeatherAPI. It adapts local time using moment-timezone and features an interactive UI.",
+      techStack: "HTML, CSS, JS, React",
+      liveSite: "https://breez3r.vercel.app/",
+      video: "/project/project3.mp4",
+    },
   ];
 
   const nextProject = () => {
@@ -47,40 +50,40 @@ const Project = () => {
   return (
     <section className="projects-container">
       <h2 className="section-title">Projects</h2>
-      
+
       <div className="project-details">
         <button className="nav-btn prev arrow-pc" onClick={prevProject}>
           <span>&lt;</span>
         </button>
-        
+
         <div className="project-card">
           <div className="project-header">
-            <div className="project-icon id-pc">
-              {currentProject.id}
-            </div>
+            <div className="project-icon id-pc">{currentProject.id}</div>
             <div>
               <h3>{currentProject.name}</h3>
               <p className="tech-name">{currentProject.techName}</p>
             </div>
           </div>
-          
+
           <div className="project-description">
             <p>{currentProject.summary}</p>
           </div>
-          
+
           <div className="project-footer">
-            <p className="tech-stack"><span>Tech Stack:</span> {currentProject.techStack}</p>
-            <a 
-              href={currentProject.liveSite} 
-              target="_blank" 
+            <p className="tech-stack">
+              <span>Tech Stack:</span> {currentProject.techStack}
+            </p>
+            <a
+              href={currentProject.liveSite}
+              target="_blank"
               rel="noopener noreferrer"
               className="live-site live-pc"
             >
               Live Website
             </a>
-            <a 
-              href={currentProject.liveSite} 
-              target="_blank" 
+            <a
+              href={currentProject.liveSite}
+              target="_blank"
               rel="noopener noreferrer"
               className="live-site live-mobile"
             >
@@ -88,13 +91,13 @@ const Project = () => {
             </a>
           </div>
         </div>
-        
+
         <button className="nav-btn next arrow-pc" onClick={nextProject}>
           <span>&gt;</span>
         </button>
       </div>
 
-      <div className='arrow-mobile'>
+      <div className="arrow-mobile">
         <button className="nav-btn prev" onClick={prevProject}>
           <span>&lt;</span>
         </button>
@@ -102,9 +105,9 @@ const Project = () => {
           <span>&gt;</span>
         </button>
       </div>
-      
+
       <div className="canvas">
-            <Canbas texture={ currentProject?.video } />
+        <Canbas texture={currentProject?.video} />
       </div>
     </section>
   );
