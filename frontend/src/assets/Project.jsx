@@ -27,13 +27,23 @@ const Project = () => {
     },
     {
       id: 3,
+      name: "AI Translate",
+      techName: "Language Chatbot",
+      summary:
+        "AI Translate is an artificial intelligence powered chatbot capable of translating text from any language into another.",
+      techStack: "React, Node, Express, MongoDB",
+      liveSite: "https://languagebot.vercel.app/",
+      video: "/project/project3.mp4",
+    },
+    {
+      id: 4,
       name: "Breezer",
       techName: "Weather Forecasting App",
       summary:
         "A responsive weather web app that displays real-time and forecast weather data, including air quality, UV index, and astronomy details, using WeatherAPI. It adapts local time using moment-timezone and features an interactive UI.",
       techStack: "HTML, CSS, JS, React",
       liveSite: "https://breez3r.vercel.app/",
-      video: "/project/project3.mp4",
+      video: "/project/project4.mp4",
     },
   ];
 
